@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transport Simulation Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Transport Simulation Dashboard</h1>
+    <div class="author">Sagar Rawat</div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <h2>Controls</h2>
+      <div class="button-group">
+        <button onclick="start('server')">▶ Start Server</button>
+        <button onclick="stop('server')">⏹ Stop Server</button>
+        <button onclick="start('client')">▶ Start Client</button>
+        <button onclick="stop('client')">⏹ Stop Client</button>
+        <button onclick="start('controller')">▶ Start Controller</button>
+        <button onclick="stop('controller')">⏹ Stop Controller</button>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <h2>Live Metrics</h2>
+      <div class="metric-card">
+        <h3>RTT</h3>
+        <p><span id="rtt">0</span> ms</p>
+      </div>
+      <div class="metric-card">
+        <h3>Throughput</h3>
+        <p><span id="throughput">0</span> Mbps</p>
+      </div>
+      <div class="metric-card">
+        <h3>Loss</h3>
+        <p><span id="loss">0</span> %</p>
+      </div>
+    </section>
+
+    <section class="log-section">
+      <h2>System Log</h2>
+      <div id="log-box" class="log-box">
+        <p><em>Waiting for actions...</em></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📊 Live Transport Simulation | Local Demo Project</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
